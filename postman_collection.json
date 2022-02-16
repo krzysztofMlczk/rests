@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d3a34203-6dac-480e-8aac-0dce44241f83",
+		"_postman_id": "8a0c33ad-f519-4634-b582-4f67f2a3c887",
 		"name": "REST API Tutorial",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -42,9 +42,10 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-                                    "const { accessToken, refreshToken } = JSON.parse(responseBody)",
-                                    "pm.collectionVariables.set(\"accessToken\", accessToken)",
-                                    "pm.collectionVariables.set(\"refreshToken\", refreshToken)"
+									"const { accessToken, refreshToken } = JSON.parse(responseBody);",
+									"",
+									"pm.collectionVariables.set(\"accessToken\", accessToken);",
+									"pm.collectionVariables.set(\"refreshToken\", refreshToken);"
 								],
 								"type": "text/javascript"
 							}
@@ -82,7 +83,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"",
 									"const newAccessToken = responseHeaders['x-access-token']",
 									"",
 									"if(newAccessToken){",
@@ -135,7 +135,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-                                    "",
 									"const newAccessToken = responseHeaders['x-access-token']",
 									"",
 									"if(newAccessToken){",
@@ -194,14 +193,13 @@
 							"script": {
 								"exec": [
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"productId\", jsonData.productId);",
-									"",
+									"pm.collectionVariables.set(\"productId\", jsonData.productId);",
 									"",
 									"const newAccessToken = responseHeaders['x-access-token']",
 									"",
 									"if(newAccessToken){",
-									"    console.log('Set new access token')",
-									"postman.setEnvironmentVariable(\"accessToken\", newAccessToken);",
+									"    console.log('New access token set (using refresh token), CAUSE: prev expired')",
+									"    pm.collectionVariables.set(\"accessToken\", newAccessToken);",
 									"}"
 								],
 								"type": "text/javascript"
@@ -301,8 +299,8 @@
 									"const newAccessToken = responseHeaders['x-access-token']",
 									"",
 									"if(newAccessToken){",
-									"    console.log('Set new access token')",
-									"postman.setEnvironmentVariable(\"accessToken\", newAccessToken);",
+									"    console.log('New access token set (using refresh token), CAUSE: prev expired')",
+									"    pm.collectionVariables.set(\"accessToken\", newAccessToken);",
 									"}"
 								],
 								"type": "text/javascript"
@@ -361,8 +359,8 @@
 									"const newAccessToken = responseHeaders['x-access-token']",
 									"",
 									"if(newAccessToken){",
-									"    console.log('Set new access token')",
-									"postman.setEnvironmentVariable(\"accessToken\", newAccessToken);",
+									"    console.log('New access token set (using refresh token), CAUSE: prev expired')",
+									"    pm.collectionVariables.set(\"accessToken\", newAccessToken);",
 									"}"
 								],
 								"type": "text/javascript"
