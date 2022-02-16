@@ -48,7 +48,7 @@ Note 2: Make sure you add .env to your .gitignore before pushing any changes to 
 
 # Deployment
 
-## What will we use
+## What will be used
 
 - Docker (image)
 - docker-compose (container)
@@ -59,5 +59,5 @@ Note: You will need Docker installed locally if you want to test your Docker con
 
 ## Code in this repository was based on:
 
-- (https://www.youtube.com/watch?v=BWUi6BS9T5Y&t=3156s)
-- [Video author:](https://www.youtube.com/TomDoesTech)
+- https://www.youtube.com/watch?v=BWUi6BS9T5Y&t=3156s
+- [Video author](https://www.youtube.com/TomDoesTech)
