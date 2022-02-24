@@ -56,8 +56,3 @@ Note 2: Make sure you add .env to your .gitignore before pushing any changes to 
 - DigitalOcean
 
 Note: You will need Docker installed locally if you want to test your Docker configutation
-
-## Code in this repository was based on:
-
-- https://www.youtube.com/watch?v=BWUi6BS9T5Y&t=3156s
-- [Video author](https://www.youtube.com/TomDoesTech)
